@@ -1,0 +1,21 @@
+#disqus_thread,
+#sigCommentsBlock {
+  margin-top: $gutter * 2;
+}
+#sigCommentsBlock {
+  margin-right: 15px;
+}
+#disqus_thread {
+  background-color: $bcg;
+  padding: 20px;
+  border-radius: 10px;
+}
+.fb-share-button {
+  margin-left: 15px;
+}
+
+@media screen and (max-width: 576px) {
+  #sigCommentsBlock {
+    margin-right: 0;
+  }
+}

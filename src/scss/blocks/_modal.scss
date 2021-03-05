@@ -1,0 +1,59 @@
+.modal {
+  z-index: 2;
+  &_show {
+    display: block;
+  }
+  display: none;
+  position: absolute;
+  width: 450px;
+  top: 30vh;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: $gutter * 3 $gutter * 4;
+  background-color: white;
+  text-align: center;
+  &__header {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: $gutter / 2;
+  }
+  &__descr {
+    font-size: 16px;
+    margin-bottom: $gutter * 2;
+    opacity: 0.7;
+  }
+  .feed-form {
+    label {
+      display: none;
+    }
+    input {
+      display: block;
+      width: 100%;
+      margin-top: $gutter;
+      padding: $gutter * 1.5;
+      border: none;
+      border-bottom: 2px solid $main-color;
+      font-size: 22px;
+      text-align: center;
+    }
+  }
+}
+
+.bcg {
+  &_show {
+    display: block;
+  }
+  z-index: 1;
+  display: none;
+  transition: all 0.2s ease;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -50px;
+    bottom: 0;
+    left: 0;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+  }
+}

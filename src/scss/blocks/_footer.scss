@@ -1,0 +1,25 @@
+.footer {
+  margin-top: 40px;
+  min-height: 100px;
+  background: linear-gradient(rgba(#000, 0), rgba(#000, 1) 100%);
+  &__copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid rgba($accent, 0.5);
+    height: 100px;
+    margin-top: 40px;
+    color: $main-color;
+    font-size: 18px;
+    text-transform: uppercase;
+    span {
+      vertical-align: middle;
+      &:first-of-type {
+        margin-right: 15px;
+      }
+    }
+    img {
+      vertical-align: middle;
+    }
+  }
+}

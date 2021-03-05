@@ -1,0 +1,115 @@
+@import 'libs/normalize';
+@import 'libs/fonts';
+@import 'base/variables';
+@import 'base/mixins';
+@import 'blocks/buttons';
+@import 'blocks/checkbox';
+@import 'blocks/footer';
+@import 'blocks/preloader';
+
+* {
+  font-weight: normal;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+*::selection {
+  background: $accent;
+}
+footer,
+.container {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+body {
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+main {
+  min-height: 100vh;
+}
+.main {
+  width: 80%;
+  &_w100 {
+    width: 100%;
+  }
+  margin-top: 70px;
+}
+h1 {
+  display: none;
+}
+p {
+  margin-bottom: 15px;
+  line-height: 1.42857rem;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  &:visited {
+    text-decoration: none;
+    color: inherit;
+  }
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+  &:focus {
+    text-decoration: none;
+    color: inherit;
+  }
+  &:active {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.container {
+  position: relative;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 10px;
+  &_flex {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+}
+.body {
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  background-color: #fff;
+  background-image: url('/assets/img/back.png'), url('/assets/img/back_1.png');
+  background-position: center top, center top;
+  background-repeat: repeat-x, repeat;
+  z-index: 10;
+  position: relative;
+  @media screen and (max-width: 576px) {
+    background-position: center -15px, center top;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container_flex {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .main {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@import 'blocks/header';
+@import 'blocks/nav';
+@import 'blocks/coils';
+@import 'blocks/card';
+@import 'blocks/weather';
+@import 'blocks/aside';
+@import 'blocks/modal';
+@import 'blocks/articles';
+@import 'blocks/article-item';
+@import 'blocks/archive';
+@import 'blocks/slider';
+@import 'blocks/comments';

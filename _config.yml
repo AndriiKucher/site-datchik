@@ -1,0 +1,24 @@
+title: datchik.top - Катушки | Датчики для металлоискателя Квазар АРМ, Фортуна(М ,М2, М3, ПРО). Купить в наличии или на заказ.
+name: datchik.top
+description: Катушка(датчик) для металлоискателя Квазар АРМ Фортуна (М, М2, М3, ПРО) купить или на заказ | Датчик.топ Снайперка | ДД | Супер Д | Омега
+keywords: катушка металлоискателя, датчик, катушка для квазар, катушка для фортуна, изготовление катушки, купить катушку металлоискателя
+imagehome: assets/img/logo.svg
+themecolor: '#669933'
+url: 'https://datchik.top'
+baseurl: '/'
+
+# Build settings
+exclude:
+  [
+    'node_modules',
+    'gulpfile.js',
+    'package.json',
+    'package-lock.json',
+    'npm-debug.log',
+    '**/Thumbs.db',
+    'scss',
+    'assets',
+    'js',
+  ]
+destination: src/_site
+source: src

@@ -1,0 +1,104 @@
+.coils {
+  background-color: $bcg;
+  border-radius: $radius;
+  padding: $gutter 20px 20px 20px;
+  margin-right: $gutter * 1.5;
+  margin-top: 20px;
+  &:first-of-type {
+    margin-top: 0;
+  }
+  &__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba($color: #444444, $alpha: 1);
+    padding-bottom: $gutter;
+  }
+  &__question-btn {
+    margin-left: $gutter;
+    border: none;
+    background-color: transparent;
+    &::before {
+      content: '';
+      display: block;
+      background: url('../assets/icons/question.svg') center center no-repeat;
+      width: 45px;
+      height: 45px;
+      line-height: 18px;
+      cursor: pointer;
+      opacity: 80%;
+      transition: 0.2s;
+    }
+    &:hover::before {
+      transform: scale(1.1);
+      opacity: 100%;
+    }
+    &:active::before {
+      transform: scale(0.9);
+      opacity: 100%;
+    }
+  }
+  &__title {
+    font-weight: bold;
+  }
+  &__descr {
+    display: none;
+    max-height: 0;
+    opacity: 0;
+    transition: opacity 0.5s, max-height 0.6s, padding 0.1s;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba($color: #444444, $alpha: 1);
+    p {
+      text-indent: 20px;
+      font-size: 18px;
+      line-height: 1.6em;
+    }
+    &_active {
+      max-height: 100%;
+      opacity: 1;
+      display: block;
+    }
+    &::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+    margin-top: 15px;
+    text-indent: 15px;
+    img {
+      float: left;
+      margin-right: 15px;
+    }
+    .advantages {
+      color: $main-color;
+    }
+    .disadvantages {
+      margin-top: 15px;
+      color: #f44336;
+    }
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .coils {
+    padding: 10px;
+    width: 100%;
+    &__title {
+      text-align: center;
+    }
+    &__descr {
+      p {
+        font-size: 18px;
+      }
+      img {
+        float: none;
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

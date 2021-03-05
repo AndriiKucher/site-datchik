@@ -1,0 +1,147 @@
+.side-panel {
+  position: relative;
+  width: 20%;
+  margin-top: 70px;
+}
+.aside {
+  background-color: rgba($color: $bcg, $alpha: 0.9);
+  border-radius: $radius;
+  margin-top: $gutter * 1.5;
+  &__subtitle {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  &_anchors,
+  &_bulletin-board {
+    // padding: $gutter 0;
+    font-size: 18px;
+    ul {
+      list-style: none;
+      text-align: center;
+      li:first-of-type a {
+        border-top-left-radius: $radius;
+        border-top-right-radius: $radius;
+      }
+      li:last-of-type a {
+        border-bottom-left-radius: $radius;
+        border-bottom-right-radius: $radius;
+      }
+    }
+    a {
+      word-wrap: break-word;
+      display: block;
+      width: 100%;
+      padding: $gutter;
+    }
+    a.active {
+      background-color: white;
+    }
+
+    a:hover {
+      background-color: #fff;
+    }
+  }
+  &_bulletin-board {
+    ul {
+      margin-top: $gutter;
+
+      li a::after {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 20px;
+        height: 35px;
+        width: 35px;
+        opacity: 0.5;
+      }
+      li a:hover::after {
+        opacity: 1;
+      }
+      li:first-of-type {
+        a::after {
+          background: url('https://izi.ua/cloud-cgi/static/izi-static/build/images/logo-izi-2zqw9.svg') center center /
+            cover no-repeat;
+        }
+      }
+      li:last-of-type {
+        a::after {
+          background: url('../assets/icons/basplatka.png') center center / cover no-repeat;
+        }
+      }
+      a.active {
+        background-color: white;
+      }
+
+      a:hover {
+        background-color: #fff;
+      }
+    }
+  }
+  &_social {
+    margin-top: 0;
+    background-color: transparent;
+    ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: $gutter;
+      margin-bottom: $gutter;
+      list-style: none;
+      li {
+        width: 100%;
+      }
+      a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        opacity: 0.8;
+        transition: all 0.2s ease;
+      }
+      a:hover {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+    }
+  }
+  &__last-articles {
+    list-style: none;
+    border-top: 1px solid #444444;
+    margin-top: 10px;
+    padding: 10px;
+    li {
+      display: flex;
+      flex-direction: column;
+      a {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-align: left;
+        font-size: 18px;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      span {
+        text-align: right;
+        font-size: 16px;
+        color: $main-color;
+        font-style: italic;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .side-panel {
+    width: 100%;
+    margin-top: 60px;
+  }
+  .aside {
+    &_anchors,
+    &_social {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{% include header-home.html %}
+  <body class="body">
+{% include main-header.html %}
+    <div class="container container_flex">
+      <main class="main_w100">
+        <h1 class="main-title">{{ page.title }}</h1>
+        <section class="articles">
+
+{% for post in site.categories.coils %}
+{% include article-section-item.html %}
+{% endfor %}
+
+        </section>
+      </main>
+    </div>
+    <script id="dsq-count-scr" src="//datchik-top.disqus.com/count.js" async=""></script>
+{% include footer.html %}

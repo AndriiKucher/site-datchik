@@ -1,0 +1,32 @@
+.preloader {
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  &__animation {
+    background-image: url('../assets/img/favicon.svg');
+    animation: load 0.5s ease-in-out infinite;
+    animation-direction: alternate;
+    width: 100px;
+    height: 100px;
+  }
+  &__text {
+    letter-spacing: 5px;
+    margin-top: 20px;
+    color: rgba($bcg, 0.7);
+    font-size: 24px;
+    font-weight: bold;
+  }
+}
+@keyframes load {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.9);
+  }
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /index.html
+Host: datchik.top
+Sitemap: https://datchik.top/sitemap.xml

@@ -1,0 +1,33 @@
+.time-weather-container {
+  .time {
+    color: $main-color;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .weather {
+    &__city {
+      color: rgb(72, 72, 74);
+      font-size: 18px;
+    }
+    &__degrees {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      font-size: 22px;
+      align-items: center;
+      img {
+        margin-left: -8px;
+      }
+    }
+    &__feels {
+      font-size: 14px;
+      margin-top: -5px;
+    }
+  }
+}
+
+// @media screen and (max-width: 720px) {
+//   .time-weather-container {
+//     display: none;
+//   }
+// }

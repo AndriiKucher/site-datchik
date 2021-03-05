@@ -1,0 +1,22 @@
+<article class="article">
+  <a class="article__link article__link__bcg" href="{{ post.url }}" style="background-image: url({{ post.image }})">
+    <div class="article__content">
+      <h3 class="article__title">{{ post.title }}</h3>
+      <div class="article__social">
+        <i class="icon-comments"></i>
+        <span
+          class="article__comments disqus-comment-count"
+          data-disqus-url="{{ post.url }}"
+          title="Кількість коментарів"
+        ></span>
+        <i class="icon-share-alt"></i>
+        <script
+          async
+          src="https://telegram.org/js/telegram-widget.js?14"
+          data-telegram-share-url="{{ site.url }}{{ post.url }}"
+          data-size="large"
+        ></script>
+      </div>
+    </div>
+  </a>
+</article>

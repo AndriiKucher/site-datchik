@@ -1,0 +1,8 @@
+.my-slider {
+  &:hover {
+    cursor: grab;
+  }
+  &:active {
+    cursor: grabbing;
+  }
+}
