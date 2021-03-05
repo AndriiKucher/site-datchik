@@ -2,5 +2,5 @@
 .jekyll-metadata
 dist
 src/_site
-src/assets
 node_modules
+.jekyll-cache
